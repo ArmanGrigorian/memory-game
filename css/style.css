@@ -4,6 +4,116 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	font-family: mortal-kikos;
+	font-family: mortal-kikos, sans-serif;
 }
 
+body {
+  background-color: #111;
+  background-image: radial-gradient(circle at center, #2a0800 0%, #000000 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.game-header h1 {
+  font-size: 48px;
+  color: #ff3300;
+  text-shadow: 2px 2px 4px #000;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #ff3300;
+  box-shadow: 0 0 10px rgba(255, 51, 0, 0.3);
+}
+
+#gameBoardContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 640px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: #1a0500;
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid #ff3300;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 51, 0, 0.5);
+}
+
+.fatality-text {
+  font-size: 72px;
+  color: rgb(128, 0, 0);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.modal-content p {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.mk-btn {
+  background: #ff3300;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 24px;
+  font-family: mortal-kikos, sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.mk-btn:hover {
+  background: #cc2900;
+  transform: translateY(-2px);
+}
+
+.mk-btn:active {
+  transform: translateY(0);
+}
